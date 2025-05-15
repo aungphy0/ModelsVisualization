@@ -1,0 +1,131 @@
+.App {
+  text-align: center;
+  display: inline-flex;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* for the left panel div */
+.LeftPanel{
+  /* position: absolute;
+  left: auto;
+  height: 600px;
+  width: 250px;
+  border: 1px solid black;
+  margin: 2em auto;
+  margin-left: 10px; */
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ModelSelect{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.FromRange{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.ToRange{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.datafolder {
+  align-items: center;
+  justify-content: center;
+}
+
+.truth{
+  align-items: center;
+  justify-content: center;
+}
+
+.detailview{
+  margin-right: -40px;
+  margin-left: 60px;
+}
+
+.wideview{
+  margin-right: -40px;
+  margin-left: 60px;
+}
+
+.input_data{
+  align-items: center;
+  margin-left: 20px;
+}
+
+.input_truth_label{
+  align-items: center;
+  margin-left: 20px;
+}
+
+.RightArea{
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: auto) {
+  .container {
+    flex-direction: column;
+  }
+
+  .LeftPanel {
+    width: 100%;
+    max-width: 100%;
+    /* margin-bottom: 20px; */
+  }
+
+  .RightArea {
+    width: 100%;
+    max-width: 100%;
+  }
+}
