@@ -80,7 +80,7 @@ const TwoMThouMatrix = ({
         d.images.forEach((imgObj) => {
           imgObj.images.forEach((imgName) => {
             imageData.push({
-              url: `http://127.0.0.1:5000/uploads/${imgName}`,
+              url: `https://modelsvisualization.onrender.com/uploads/${imgName}`,
               model: imgObj.model,
             });
           });
@@ -89,7 +89,7 @@ const TwoMThouMatrix = ({
       } else if (d.image && Array.isArray(d.image)) {
         // Individual matrix cell
         const imageUrls = d.image.map((imgName) => ({
-          url: `http://127.0.0.1:5000/uploads/${imgName}`,
+          url: `https://modelsvisualization.onrender.com/uploads/${imgName}`,
           model: d.modelName || "",
         }));
         setHoverImages(imageUrls);

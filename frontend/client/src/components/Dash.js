@@ -48,7 +48,7 @@ const Dash = ({goToMatrix}) => {
   useEffect(() => {
     const fetchData = async () => {
        try {
-         const response = await axios.get(`http://127.0.0.1:5000/${selectedModel}`);
+         const response = await axios.get(`https://modelsvisualization.onrender.com/${selectedModel}`);
          setPData(response.data || []);
        } catch (error) {
          console.error('Error fetching data:', error);
@@ -92,7 +92,7 @@ const Dash = ({goToMatrix}) => {
 
   const handleFetchImages = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/images');
+      const response = await axios.get('https://modelsvisualization.onrender.com/images');
       setImages(response.data);
     } catch (error) {
       console.error('Error fetching images:', error);
@@ -174,19 +174,19 @@ const Dash = ({goToMatrix}) => {
       <div className="LeftPanel">
 
         {/* ################  data folder input  ############### */}
-        <div className="datafolder">
+        {/* <div className="datafolder">
           <ImageUpload />
-        </div>
+        </div> */}
         {/* ################  data folder input  ############### */}
 
         <br></br>
         {/* ################  truth.json file input  ############### */}
-        <div className="truth">
+        {/* <div className="truth">
           <TruthUpload />
-        </div>
+        </div> */}
         {/* ################  truth.json file input  ############### */}
 
-        <RunModels />
+        {/* <RunModels /> */}
 
         {/* for models selction to show data */}
         <div className="ModelSelect">
@@ -255,7 +255,7 @@ const Dash = ({goToMatrix}) => {
             <span>{value2}</span>
         </div> */}
         <div>
-          <img src={ img === "./default-placeholder.png" ? './default-placeholder.png' : `http://127.0.0.1:5000/uploads/${img}`}
+          <img src={ img === "./default-placeholder.png" ? './default-placeholder.png' : `https://modelsvisualization.onrender.com/uploads/${img}`}
                alt={"pic"}
                style={{ width: '200px', height: '200px', objectFit: 'cover' }}
           />

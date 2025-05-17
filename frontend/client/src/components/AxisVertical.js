@@ -47,7 +47,7 @@ const AxisVertical = ({ yScale, pixelsPerTick, name, model }) => {
 
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/classes")
+    fetch("https://modelsvisualization.onrender.com/api/classes")
       .then((response) => response.json())
       .then((data) => {
         const classes = data[0];
@@ -208,7 +208,7 @@ const AxisVertical = ({ yScale, pixelsPerTick, name, model }) => {
                         {match.image.map((img, imgIndex) => (
                           <img
                             key={imgIndex}
-                            src={`http://127.0.0.1:5000/uploads/${img}`} // Replace with your actual image folder path
+                            src={`https://modelsvisualization.onrender.com/uploads/${img}`} // Replace with your actual image folder path
                             alt={match.actual}
                             style={{
                               width: "80px",
@@ -237,7 +237,7 @@ const AxisVertical = ({ yScale, pixelsPerTick, name, model }) => {
                         {match.image.map((img, imgIndex) => (
                           <img
                             key={imgIndex}
-                            src={`http://127.0.0.1:5000/uploads/${img}`} // Replace with your actual image folder path
+                            src={`https://modelsvisualization.onrender.com/uploads/${img}`} // Replace with your actual image folder path
                             alt={match.actual}
                             style={{
                               width: "80px",
@@ -266,7 +266,7 @@ const AxisVertical = ({ yScale, pixelsPerTick, name, model }) => {
                         {match.image.map((img, imgIndex) => (
                           <img
                             key={imgIndex}
-                            src={`http://127.0.0.1:5000/uploads/${img}`} // Replace with your actual image folder path
+                            src={`https://modelsvisualization.onrender.com/uploads/${img}`} // Replace with your actual image folder path
                             alt={match.actual}
                             style={{
                               width: "80px",
