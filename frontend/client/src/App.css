@@ -38,6 +38,14 @@
   }
 }
 
+.MainContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+
 /* for the left panel div */
 .LeftPanel{
   /* position: absolute;
@@ -47,6 +55,11 @@
   border: 1px solid black;
   margin: 2em auto;
   margin-left: 10px; */
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  padding: 1rem;
+
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -106,15 +119,17 @@
 }
 
 .RightArea{
-  flex: 1;
-  padding: 20px;
+  flex: 3;
+  padding: 1rem;
+  overflow-x: auto;
+  /* padding: 20px; */
   background-color: #fff;
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 
 /* Media queries for responsiveness */
-@media only screen and (max-width: auto) {
+/* @media only screen and (max-width: auto) {
   .container {
     flex-direction: column;
   }
@@ -123,10 +138,28 @@
     width: 100%;
     max-width: 100%;
     /* margin-bottom: 20px; */
+  /* } */
+
+  /* .RightArea {
+    width: 100%;
+    max-width: 100%;
+  } */ 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .MainContainer {
+    flex-direction: column;
+  }
+
+  .LeftPanel, .RightArea {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .LeftPanel {
+    order: 2; /* Put left panel below charts */
   }
 
   .RightArea {
-    width: 100%;
-    max-width: 100%;
+    order: 1;
   }
 }

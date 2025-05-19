@@ -170,150 +170,150 @@ const Dash = ({goToMatrix}) => {
   return (
 
     <div className="App">
-   
-      <div className="LeftPanel">
+      <div className="MainContainer"> 
+        <div className="LeftPanel">
 
-        {/* ################  data folder input  ############### */}
-        {/* <div className="datafolder">
-          <ImageUpload />
-        </div> */}
-        {/* ################  data folder input  ############### */}
+          {/* ################  data folder input  ############### */}
+          {/* <div className="datafolder">
+            <ImageUpload />
+          </div> */}
+          {/* ################  data folder input  ############### */}
 
-        <br></br>
-        {/* ################  truth.json file input  ############### */}
-        {/* <div className="truth">
-          <TruthUpload />
-        </div> */}
-        {/* ################  truth.json file input  ############### */}
+          <br></br>
+          {/* ################  truth.json file input  ############### */}
+          {/* <div className="truth">
+            <TruthUpload />
+          </div> */}
+          {/* ################  truth.json file input  ############### */}
 
-        {/* <RunModels /> */}
+          {/* <RunModels /> */}
 
-        {/* for models selction to show data */}
-        <div className="ModelSelect">
-          <label> Models </label> <br/><br/>
-          <select onChange={handleModelChange} onClick={handleFetchImages} value={selectedModel}>
-              <option value="">Select Model</option>
-              <option value="fetchAlex">AlexNet</option>
-              <option value="fetchMobile">MobileNet</option>
-              <option value="fetchShuffle">ShuffleNet</option>
-              <option value="fetchSqueezenet1_0">SqueezeNet1_0</option>
-              <option value="fetchSqueezenet1_1">SqueezeNet1_1</option>
-              <option value="fetchMnasnet0_5">Mnasnet0_5</option>
-          </select>
-        </div>
-        {/* for models selction to show data */}
-        
-        <div className="FromRange">
-            <label>Classes Range</label>
-           
-            <div style={{ position: 'relative', width: '100%' }}>
-                <input
-                    type="range"
-                    min="20"
-                    max="50"
-                    step="10"
-                    value={value1}
-                    onChange={handleSliderChange}
-                    style={{ width: '100%' }}
-                />
-                {/* Add the marks */}
-                <div
-                    style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    position: 'absolute',
-                    top: '20px', // Adjust for better positioning
-                    width: '100%',
-                    }}
-                >
-                    {[20, 30, 40, 50].map(mark => (
-                    <span
-                        key={mark}
-                        style={{
-                        position: 'relative',
-                        fontSize: '12px',
-                        transform: 'translateX(25%)',
-                        }}
-                    >
-                        {mark}
-                    </span>
-                    ))}
-                </div>
-            </div>
-            {/* <div>{value1} - {value2}</div> */}
-        </div>
-        
-        {/* <div className="ToRange">
-            <label>To:</label>
-            <input
-            type="range"
-            min="20"
-            max="1000"
-            value={value2}
-            onChange={(e) => handleSliderChange(2, e)}
+          {/* for models selction to show data */}
+          <div className="ModelSelect">
+            <label> Models </label> <br/><br/>
+            <select onChange={handleModelChange} onClick={handleFetchImages} value={selectedModel}>
+                <option value="">Select Model</option>
+                <option value="fetchAlex">AlexNet</option>
+                <option value="fetchMobile">MobileNet</option>
+                <option value="fetchShuffle">ShuffleNet</option>
+                <option value="fetchSqueezenet1_0">SqueezeNet1_0</option>
+                <option value="fetchSqueezenet1_1">SqueezeNet1_1</option>
+                <option value="fetchMnasnet0_5">Mnasnet0_5</option>
+            </select>
+          </div>
+          {/* for models selction to show data */}
+          
+          <div className="FromRange">
+              <label>Classes Range</label>
+            
+              <div style={{ position: 'relative', width: '100%' }}>
+                  <input
+                      type="range"
+                      min="20"
+                      max="50"
+                      step="10"
+                      value={value1}
+                      onChange={handleSliderChange}
+                      style={{ width: '100%' }}
+                  />
+                  {/* Add the marks */}
+                  <div
+                      style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      position: 'absolute',
+                      top: '20px', // Adjust for better positioning
+                      width: '100%',
+                      }}
+                  >
+                      {[20, 30, 40, 50].map(mark => (
+                      <span
+                          key={mark}
+                          style={{
+                          position: 'relative',
+                          fontSize: '12px',
+                          transform: 'translateX(25%)',
+                          }}
+                      >
+                          {mark}
+                      </span>
+                      ))}
+                  </div>
+              </div>
+              {/* <div>{value1} - {value2}</div> */}
+          </div>
+          
+          {/* <div className="ToRange">
+              <label>To:</label>
+              <input
+              type="range"
+              min="20"
+              max="1000"
+              value={value2}
+              onChange={(e) => handleSliderChange(2, e)}
+              />
+              <span>{value2}</span>
+          </div> */}
+          <div>
+            <img src={ img === "./default-placeholder.png" ? './default-placeholder.png' : `https://modelsvisualization.onrender.com/uploads/${img}`}
+                alt={"pic"}
+                style={{ width: '200px', height: '200px', objectFit: 'cover' }}
             />
-            <span>{value2}</span>
-        </div> */}
-        <div>
-          <img src={ img === "./default-placeholder.png" ? './default-placeholder.png' : `https://modelsvisualization.onrender.com/uploads/${img}`}
-               alt={"pic"}
-               style={{ width: '200px', height: '200px', objectFit: 'cover' }}
-          />
-          {/* <h5> {img} </h5> */}
+            {/* <h5> {img} </h5> */}
+          </div>
+          <br></br>
+          <button onClick={goToMatrix}> Confusion Matrix </button>
         </div>
-        <br></br>
-        <button onClick={goToMatrix}> Confusion Matrix </button>
-      </div>
-      
-      <div className="RightArea">
-        <div className='detailview'>
-          <BrowserRouter>
-            <Routes>
-              <Route
-                path='/'
-                element={
-                  <ParallelCoordinatesPlot
-                    data={data}
-                    width={1800}
-                    height={400}
-                    FROM_VARIABLES={v1}
-                    TO_VARIABLES={v1 + value1 <= 999 ? v1 + value1 : 999}
-                    setImg = {setImg}
-                    model = {selectedModel}
-                  />
-                }
-              />
-            </Routes>
-          </BrowserRouter>
+        
+        <div className="RightArea">
+          <div className='detailview'>
+            <BrowserRouter>
+              <Routes>
+                <Route
+                  path='/'
+                  element={
+                    <ParallelCoordinatesPlot
+                      data={data}
+                      width={1800}
+                      height={400}
+                      FROM_VARIABLES={v1}
+                      TO_VARIABLES={v1 + value1 <= 999 ? v1 + value1 : 999}
+                      setImg = {setImg}
+                      model = {selectedModel}
+                    />
+                  }
+                />
+              </Routes>
+            </BrowserRouter>
 
-          <h1> {`${selectedModel.slice(5)}`.concat(`${selectedModel ? "Net" : ""}`)} </h1>
-        </div>
+            <h1> {`${selectedModel.slice(5)}`.concat(`${selectedModel ? "Net" : ""}`)} </h1>
+          </div>
 
-      
-        <div className='wideview'>
-          <BrowserRouter>
-            <Routes>
-              <Route
-                path='/'
-                element={
-                  <ParallelCoordinatesWide
-                    data={data}
-                    width={1800}
-                    height={150}
-                    FROM_VARIABLES={0}
-                    TO_VARIABLES={1000}
-                    START={0}
-                    END={value2}
-                    setV1={setV1}
-                    shadedArea={value1}
-                  />
-                }
-              />
-            </Routes>
-          </BrowserRouter>
+        
+          <div className='wideview'>
+            <BrowserRouter>
+              <Routes>
+                <Route
+                  path='/'
+                  element={
+                    <ParallelCoordinatesWide
+                      data={data}
+                      width={1800}
+                      height={150}
+                      FROM_VARIABLES={0}
+                      TO_VARIABLES={1000}
+                      START={0}
+                      END={value2}
+                      setV1={setV1}
+                      shadedArea={value1}
+                    />
+                  }
+                />
+              </Routes>
+            </BrowserRouter>
+          </div>
         </div>
       </div>
-
     </div>
   );
 
