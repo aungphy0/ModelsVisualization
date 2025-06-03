@@ -1,3 +1,21 @@
-flask
-flask-Cors=4.0.0
-gunicorn
+# === Core Flask Web Framework ===
+Flask==2.3.3                   # Core framework for web apps
+
+# === Production Server for WSGI Apps ===
+gunicorn==21.2.0               # WSGI server used in production (Render uses this)
+
+# === Environment Variable Support ===
+python-dotenv==1.0.1           # Loads .env file values into environment variables
+
+# === CORS Support for APIs ===
+Flask-Cors==4.0.0              # Handles cross-origin requests (if building APIs)
+
+# === HTTP Client (Optional) ===
+requests==2.31.0               # For making external HTTP/API calls
+
+# === Database Support ===
+SQLAlchemy==2.0.30             # SQL ORM for Python
+Flask-SQLAlchemy==3.1.1        # SQLAlchemy integration with Flask
+
+# === PostgreSQL Driver (used by Render’s managed PostgreSQL) ===
+psycopg2-binary==2.9.9         # PostgreSQL adapter for Python
