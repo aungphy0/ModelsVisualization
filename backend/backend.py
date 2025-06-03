@@ -1674,7 +1674,7 @@ def fetch_alex():
     model = request.args.get('model', default='alexnet', type=str)
     # filename = "Alex_Net_values.json"
     # filename = './image_json_files_alex/img7.json'
-    filename = "Alexnet.json"
+    filename = "alexnet.json"
     # filename = "truth.json"
 
     try:
@@ -1690,7 +1690,7 @@ def fetch_mobile():
     model = request.args.get('model', default='mobilenet', type=str)
     # filename = "Mobile_Net_values.json"
     #filename = './image_json_files_mobile/img7.json'
-    filename = "Mobilenet.json"
+    filename = "mobilenet.json"
 
     try:
         with open(filename, 'r') as json_file:
@@ -1704,7 +1704,7 @@ def fetch_shuffle():
     model = request.args.get('model', default='shufflenet', type=str)
     # filename = "Mobile_Net_values.json"
     #filename = './image_json_files_mobile/img7.json'
-    filename = "Shufflenet.json"
+    filename = "shufflenet.json"
 
     try:
         with open(filename, 'r') as json_file:
@@ -1718,7 +1718,7 @@ def fetch_squeezenet1_0():
     model = request.args.get('model', default='squeezenet1_0', type=str)
     # filename = "Mobile_Net_values.json"
     #filename = './image_json_files_mobile/img7.json'
-    filename = "Squeezenet1_0.json"
+    filename = "squeezenet1_0.json"
 
     try:
         with open(filename, 'r') as json_file:
@@ -1733,7 +1733,7 @@ def fetch_squeezenet1_1():
     model = request.args.get('model', default='squeezenet1_1', type=str)
     # filename = "Mobile_Net_values.json"
     #filename = './image_json_files_mobile/img7.json'
-    filename = "Squeezenet1_1.json"
+    filename = "squeezenet1_1.json"
 
     try:
         with open(filename, 'r') as json_file:
