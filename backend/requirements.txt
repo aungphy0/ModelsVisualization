@@ -19,3 +19,6 @@ Flask-SQLAlchemy==3.1.1        # SQLAlchemy integration with Flask
 
 # === PostgreSQL Driver (used by Render’s managed PostgreSQL) ===
 psycopg2-binary==2.9.9         # PostgreSQL adapter for Python
+
+torch==2.2.2         # Or latest stable version
+torchvision==0.17.2  # Match this with torch version
