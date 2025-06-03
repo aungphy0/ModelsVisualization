@@ -22,3 +22,5 @@ psycopg2-binary==2.9.9         # PostgreSQL adapter for Python
 
 torch==2.2.2         # Or latest stable version
 torchvision==0.17.2  # Match this with torch version
+
+scikit-image==0.22.0  # Or latest stable version
