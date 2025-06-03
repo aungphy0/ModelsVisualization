@@ -1,26 +1,27 @@
-# === Core Flask Web Framework ===
-Flask==2.3.3                   # Core framework for web apps
+# ==== Core Framework ====
+Flask==2.3.3                  # Lightweight WSGI web framework
 
-# === Production Server for WSGI Apps ===
-gunicorn==21.2.0               # WSGI server used in production (Render uses this)
+# ==== Production Server ====
+gunicorn==21.2.0              # WSGI HTTP server for production (used by Render)
 
-# === Environment Variable Support ===
-python-dotenv==1.0.1           # Loads .env file values into environment variables
+# ==== Environment Configuration ====
+python-dotenv==1.0.1          # Load environment variables from .env file
 
-# === CORS Support for APIs ===
-Flask-Cors==4.0.0              # Handles cross-origin requests (if building APIs)
+# ==== CORS (for API access from front-end apps) ====
+Flask-Cors==4.0.0             # Cross-Origin Resource Sharing
 
-# === HTTP Client (Optional) ===
-requests==2.31.0               # For making external HTTP/API calls
+# ==== HTTP Requests ====
+requests==2.31.0              # Makes HTTP calls (optional)
 
-# === Database Support ===
-SQLAlchemy==2.0.30             # SQL ORM for Python
-Flask-SQLAlchemy==3.1.1        # SQLAlchemy integration with Flask
+# ==== Database (PostgreSQL) ====
+SQLAlchemy==2.0.30            # SQL ORM
+Flask-SQLAlchemy==3.1.1       # Flask integration with SQLAlchemy
+psycopg2-binary==2.9.9        # PostgreSQL driver (used with Render PostgreSQL)
 
-# === PostgreSQL Driver (used by Render’s managed PostgreSQL) ===
-psycopg2-binary==2.9.9         # PostgreSQL adapter for Python
+# ==== Optional: ML and Image Processing Support ====
+torch==2.2.2                  # PyTorch (if using machine learning)
+torchvision==0.17.2           # PyTorch vision utilities
+scikit-image==0.22.0          # Image processing
 
-torch==2.2.2         # Or latest stable version
-torchvision==0.17.2  # Match this with torch version
-
-scikit-image==0.22.0  # Or latest stable version
+# ==== Optional: Data Manipulation ====
+pandas==2.2.2                 # Data manipulation and analysis
